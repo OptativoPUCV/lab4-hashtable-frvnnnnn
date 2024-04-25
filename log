@@ -1,0 +1,16 @@
+Thu 25 Apr 2024 04:03:29 PM UTC: 
+ hashmap.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:41:8: error: expected expression before ‘,’ token
+   41 |   hash(, long capacity)
+      |        ^
+hashmap.c:41:24: error: expected ‘;’ before ‘}’ token
+   41 |   hash(, long capacity)
+      |                        ^
+      |                        ;
+   42 | }
+      | ~                       
+Compilation failed
+69a7561
