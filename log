@@ -86,3 +86,9 @@ hashmap.c:83:32: error: suggest parentheses around comparison in operand of ‘&
 cc1: all warnings being treated as errors
 Compilation failed
 46ac439
+Sat 27 Apr 2024 05:01:22 AM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  8|3
+total_score: 40/70
+baabc7a
