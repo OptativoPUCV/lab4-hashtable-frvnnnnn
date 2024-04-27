@@ -102,10 +102,9 @@ Pair * searchMap(HashMap * map, char * key) {
 
 Pair * firstMap(HashMap * map) {
     for (int i = 0; i < map->capacity; i++) {
-        Pair *pair = map->buckets[i];
-        if (pair != NULL ) {
+        if (map->buckets[i] != NULL ) {
             map->current = i;
-            return pair;}
+            return map->buckets[i];}
     }
     return NULL;  
 }
