@@ -101,26 +101,28 @@ Pair * searchMap(HashMap * map, char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  if(map == NULL || map->size==0){return NULL;}
+    if (map == NULL || map->size == 0) {
+        return NULL;}
     for (int i = 0; i < map->capacity; i++) {
         Pair *pair = map->buckets[i];
         if (pair != NULL) {
-            return pair;
-        }
+            map->current = i;
+            return pair;}
     }
-    return NULL;
+    return NULL;  
 }
 
-Pair *nextMap(HashMap *map) {
+
+Pair * nextMap(HashMap * map) {
     if (map == NULL || map->size == 0) {
-        return NULL;}
-    Pair *currentPair = map->buckets[map->current];
+        return NULL;
+    }
     for (int i = map->current + 1; i < map->capacity; i++) {
         Pair *pair = map->buckets[i];
         if (pair != NULL) {
             map->current = i;
-            return pair;
-        }
+            return pair;}
     }
-    return NULL; 
+    return NULL;
 }
+

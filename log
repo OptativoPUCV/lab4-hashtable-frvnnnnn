@@ -126,3 +126,9 @@ hashmap.c:117:11: error: unused variable ‘currentPair’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 a801c1d
+Sat 27 Apr 2024 05:54:15 AM UTC: 
+ hashmap.c | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+ tests:  12|2
+total_score: 50/70
+2445962
