@@ -44,8 +44,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     {
       pos = (pos+1)%map->capacity;
     }
-  map->buckets[pos]->key=key;
-  map->buckets[pos]->value=value;
+  strcpy(map->buckets[pos]->key,key);
+  map->buckets[pos]->value = (void*)value;
   map->current ++;
   
 }
