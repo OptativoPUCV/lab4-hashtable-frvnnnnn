@@ -138,3 +138,13 @@ Sat 27 Apr 2024 05:56:24 AM UTC:
  tests:  12|2
 total_score: 50/70
 563bec7
+Sat 27 Apr 2024 05:57:34 AM UTC: 
+ hashmap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:108:28: error: expected expression before ‘)’ token
+  108 |         if (pair != NULL &&) {
+      |                            ^
+Compilation failed
+90ba0da
