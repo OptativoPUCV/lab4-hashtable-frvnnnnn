@@ -38,16 +38,7 @@ int is_equal(void* key1, void* key2){
     return 0;
 }
 void insertMap(HashMap * map, char * key, void * value) {
-  int pos =hash(key,map->capacity);
-  //si esta ocupada toma el siguiente espacio pos++
-  while(map->buckets[pos]!=NULL)
-    {
-      pos = (pos+1)%map->capacity;
-    }
-  strcpy(map->buckets[pos]->key,key);
-  map->buckets[pos]->value = (void*)value;
-  map->current ++;
-  
+
 }
 
 void enlarge(HashMap * map) {
