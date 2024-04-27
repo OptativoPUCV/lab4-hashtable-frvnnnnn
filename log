@@ -41,3 +41,14 @@ Sat 27 Apr 2024 03:24:04 AM UTC:
  tests:  1|5
 total_score: 10/70
 1ff9a90
+Sat 27 Apr 2024 03:33:58 AM UTC: 
+ hashmap.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:45: error: ‘Bucket’ undeclared (first use in this function)
+   46 |           map->buckets[pos] = malloc(sizeof(Bucket));
+      |                                             ^~~~~~
+hashmap.c:46:45: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c027a2b

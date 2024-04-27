@@ -37,10 +37,23 @@ int is_equal(void* key1, void* key2){
     if(strcmp((char*)key1,(char*)key2) == 0) return 1;
     return 0;
 }
-void insertMap(HashMap * map, char * key, void * value) {
+void insertMap(HashMap *map, char *key, void *value) {
+      int pos = hash(key, map->capacity);
+      while (map->buckets[pos] != NULL) {
+          pos = (pos + 1) % map->capacity;  
+      }
+      if (map->buckets[pos] == NULL) {
+          map->buckets[pos] = malloc(sizeof(Bucket));
+          if (map->buckets[pos] == NULL) {
+              
+              return;
+          }
+      }
+      map->buckets[pos]->key = key;  
+      map->buckets[pos]->value = value;
 
-}
-
+      map->current++;  
+  }
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
