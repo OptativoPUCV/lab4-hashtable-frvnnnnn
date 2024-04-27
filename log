@@ -104,3 +104,14 @@ Sat 27 Apr 2024 05:20:01 AM UTC:
  tests:  11|2
 total_score: 50/70
 995ee15
+Sat 27 Apr 2024 05:46:26 AM UTC: 
+ hashmap.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:115:9: error: unused variable ‘currentPair’ [-Werror=unused-variable]
+  115 |   Pair *currentPair = map->buckets[map->current];
+      |         ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8e0d275
