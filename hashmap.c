@@ -111,13 +111,16 @@ Pair * firstMap(HashMap * map) {
     return NULL;
 }
 
-Pair * nextMap(HashMap * map) {
-  Pair *currentPair = map->buckets[map->current];
-  for (int i = map->current + 1; i < map->capacity; i++) {
-      Pair *pair = map->buckets[i];
-      if (pair != NULL) {
-          map->current = i; 
-          return pair;}
-  }
-    return NULL;
+Pair *nextMap(HashMap *map) {
+    if (map == NULL || map->size == 0) {
+        return NULL;}
+    Pair *currentPair = map->buckets[map->current];
+    for (int i = map->current + 1; i < map->capacity; i++) {
+        Pair *pair = map->buckets[i];
+        if (pair != NULL) {
+            map->current = i;
+            return pair;
+        }
+    }
+    return NULL; 
 }

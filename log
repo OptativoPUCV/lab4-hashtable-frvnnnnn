@@ -115,3 +115,14 @@ hashmap.c:115:9: error: unused variable ‘currentPair’ [-Werror=unused-variab
 cc1: all warnings being treated as errors
 Compilation failed
 8e0d275
+Sat 27 Apr 2024 05:49:18 AM UTC: 
+ hashmap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:117:11: error: unused variable ‘currentPair’ [-Werror=unused-variable]
+  117 |     Pair *currentPair = map->buckets[map->current];
+      |           ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+a801c1d
