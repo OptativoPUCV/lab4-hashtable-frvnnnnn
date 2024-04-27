@@ -52,3 +52,14 @@ hashmap.c:46:45: error: ‘Bucket’ undeclared (first use in this function)
 hashmap.c:46:45: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 c027a2b
+Sat 27 Apr 2024 03:36:26 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:45: error: ‘buckets’ undeclared (first use in this function)
+   46 |           map->buckets[pos] = malloc(sizeof(buckets));
+      |                                             ^~~~~~~
+hashmap.c:46:45: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+40ce62a

@@ -43,7 +43,7 @@ void insertMap(HashMap *map, char *key, void *value) {
           pos = (pos + 1) % map->capacity;  
       }
       if (map->buckets[pos] == NULL) {
-          map->buckets[pos] = malloc(sizeof(Bucket));
+          map->buckets[pos] = malloc(sizeof(buckets));
           if (map->buckets[pos] == NULL) {
               
               return;
