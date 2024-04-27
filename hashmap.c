@@ -42,11 +42,11 @@ void insertMap(HashMap * map, char * key, void * value) {
   //si esta ocupada toma el siguiente espacio pos++
   while(map->buckets[pos]!=NULL)
     {
-      pos++;
+      pos = (pos+1)%map->capacity;
     }
-
+  map->buckets[pos]->key=key;
   map->buckets[pos]->value=value;
-  map->current = (long)(map->buckets[pos]->value);
+  map->current ++;
   
 }
 
