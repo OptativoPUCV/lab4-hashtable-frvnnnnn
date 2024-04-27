@@ -68,9 +68,9 @@ void enlarge(HashMap * map) {
   for (int i = 0; i < old_capacity; i++) {
       Pair *current = old_buckets[i];
       while (current != NULL) {
-          Pair *next = nextMap(map);
+          Pair *actual = nextMap(map);
           insertMap(map, current->key, current->value); 
-          current = next;
+          current = actual;
       }
   }
 
